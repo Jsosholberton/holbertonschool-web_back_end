@@ -11,6 +11,7 @@ MODULE DESCRIPTION:
 
 '''
 
-def add(a:float, b:float) -> float:
+
+def add(a: float, b: float) -> float:
     """Return the sum of a 2 floats"""
     return a + b
