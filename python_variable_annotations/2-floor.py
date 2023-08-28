@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 '''
 -------------------------------------------------------------------------------
-MODULE NAME : 1-concat
+MODULE NAME : 2-floor
 -------------------------------------------------------------------------------
 MODULE DESCRIPTION:
 -------------------------------------------------------------------------------
-    Write a type-annotated function concat that takes a string str1 and a strin
-    g str2 as arguments and returns a concatenated string
+    Write a type-annotated function floor which takes a float n as argument and
+    returns the floor of the float.
 -------------------------------------------------------------------------------
 
 '''
 
 
-def concat(str1: str, str2: str) -> str:
-    """ Return a concatenaded string """
-
-    return str1 + str2
+def floor(n: float) -> int:
+    """Return the floor of an float"""
+    return int(n)
