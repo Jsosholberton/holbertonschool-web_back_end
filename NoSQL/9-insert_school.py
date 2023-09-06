@@ -11,7 +11,7 @@ kwargs:
     -mongo_collection will be the pymongo collection object
     -Returns the new _id
 '''
-import pymongo
+
 
 def insert_school(mongo_collection, **kwargs):
     ''' Insert new document in a collection '''
