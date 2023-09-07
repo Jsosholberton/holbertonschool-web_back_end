@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 -------------------------------------------------------------------------------
-MODULE NAME = 12-log_stats
+MODULE NAME = 0-simple_helper_function
 -------------------------------------------------------------------------------
 DESCRIPTION:
 -------------------------------------------------------------------------------
@@ -14,8 +14,10 @@ particular pagination parameters.
 
 Page numbers are 1-indexed, i.e. the first page is page 1.
 '''
+from typing import Tuple
 
-def index_range(page, page_size) -> tuple:
-    ''''''
 
-    return (page * 10 if page > 1 else 0, page_size * page)
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    ''' That return a range of indexes '''
+
+    return ((page_size * page) - page_size, page_size * page)
