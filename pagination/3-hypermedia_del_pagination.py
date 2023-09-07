@@ -47,7 +47,7 @@ class Server:
             'index': index,
             'next_index': index + page_size,
             'page_size': page_size,
-            'data': self.dataset()[(page_size * index) - page_size - 1: (page_size * index) - 1]
+            'data': self.dataset()[(page_size * index) - page_size - 1:
+                                   (page_size * index) - 1]
         }
         return dict_to_return
-    
