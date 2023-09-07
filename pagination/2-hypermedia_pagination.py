@@ -49,12 +49,14 @@ class Server:
         index: tuple = index_range(page, page_size)
 
         return self.dataset()[index[0]: index[1]]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """ That return a dictionary with the values about the page """
         try:
-            self.get_page(page + 1, page_size)
-            next_page = page + 1
+            if len(self.get_page(page + 1, page_size)) < page_size:
+                next_page = None
+            else:
+                next_page = page + 1
         except Exception:
             next_page = None
 
