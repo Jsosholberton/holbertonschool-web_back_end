@@ -3,6 +3,7 @@ export default class HolbertonClass {
     this._size = size;
     this._location = location;
   }
+
   [Symbol.toPrimitive](dataType) {
     return dataType === 'string' ? `${this._location}` : `${this._size}`;
   }
