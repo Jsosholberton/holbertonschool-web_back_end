@@ -1,13 +1,14 @@
 import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
-export default function handleProfileSignup(
+export default async function handleProfileSignup(
   firstName = '',
   lastName = '',
   fileName = '',
 ) {
-  return Promise.allSettled([
+  const prom = await Promise.allSettled([
     uploadPhoto(fileName),
     signUpUser(firstName, lastName),
   ]);
+  return prom;
 }
