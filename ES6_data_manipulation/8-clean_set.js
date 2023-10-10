@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   let string = '';
 
-  if (!set || !startString) return '';
+  if (!set || !startString || typeof (startString) !== 'string') return '';
 
   for (const item of set) {
     if (item && item.startsWith(startString)) {
